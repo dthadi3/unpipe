@@ -1,4 +1,7 @@
 language: node_js
+arch:
+  - amd64
+  - ppc64le
 node_js:
   - "0.8"
   - "0.10"
@@ -13,6 +16,20 @@ node_js:
   - "8.11"
   - "9.11"
   - "10.5"
+jobs:
+    exclude:
+      - node-js: 0.8
+        arch: ppc64le
+      - node-js: 0.10
+        arch: ppc64le
+      - node-js: 0.12
+        arch: ppc64le
+      - node-js: 1.8
+        arch: ppc64le
+      - node-js: 2.5
+        arch: ppc64le
+      - node-js: 3.3
+        arch: ppc64le
 sudo: false
 cache:
   directories:
